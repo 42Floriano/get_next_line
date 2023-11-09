@@ -6,7 +6,7 @@
 /*   By: albertini <albertini@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 16:57:09 by albertini         #+#    #+#             */
-/*   Updated: 2023/11/09 16:10:37 by albertini        ###   ########.fr       */
+/*   Updated: 2023/11/09 17:23:08 by albertini        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,9 @@ typedef struct s_list
 } t_list;
 
 char    *get_next_line(int fd);
-void    read_and_stash(int fd, t_list **stash, int *rd);
+void    read_and_stash(int fd, t_list **stash);
 void    add_to_stash(t_list **stash, char *buff, int rd);
-void    extract_line(t_list *stash, char *line);
+void    extract_line(t_list *stash, char **line);
 void    clean_stash(t_list **stash);
 int     found_nline(t_list *stash);
 t_list	*ft_lst_get_last(t_list *stash);

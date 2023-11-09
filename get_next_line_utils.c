@@ -6,7 +6,7 @@
 /*   By: albertini <albertini@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 16:57:16 by albertini         #+#    #+#             */
-/*   Updated: 2023/11/09 16:10:49 by albertini        ###   ########.fr       */
+/*   Updated: 2023/11/09 17:46:31 by albertini        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int	get_size_line(t_list *stash)
 		{
 			if (current->content[i] ==  '\n')
 			{
-				len ++;
+				len++;
 				break ;
 			}
 			i++;
