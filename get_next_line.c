@@ -6,7 +6,7 @@
 /*   By: albertini <albertini@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 16:57:06 by albertini         #+#    #+#             */
-/*   Updated: 2023/11/09 17:50:40 by albertini        ###   ########.fr       */
+/*   Updated: 2023/11/09 21:41:55 by albertini        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ void  add_to_stash(t_list **stash, char *buff, int rd)
 	if (new_node->content == NULL)
 		return ;
 	i = 0;
-	while (buff[i] != '\0' && i < rd)
+	while (buff[i] && i < rd)
 	{
 		new_node->content[i] = buff[i];
 		i++;
