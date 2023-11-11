@@ -6,7 +6,7 @@
 /*   By: albertini <albertini@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 16:57:06 by albertini         #+#    #+#             */
-/*   Updated: 2023/11/09 21:41:55 by albertini        ###   ########.fr       */
+/*   Updated: 2023/11/11 17:28:02 by albertini        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -145,11 +145,13 @@ void  clean_stash(t_list **stash)
 		i++;
 	if (last->content[i] == '\n')
 		i++;
-	cleaned->content = malloc(sizeof(char) * (ft_strlen(last->content) - i + 1));
+	cleaned->content = malloc(sizeof(char) * ((ft_strlen(last->content) - i) + 1));
+	if (cleaned->content == NULL)
+		return ;
 	y = 0;
 	while(last->content[i])
 		cleaned->content[y++] = last->content[i++];
-	cleaned->content[y++] = '\0';
+	cleaned->content[y] = '\0';
 	free_stash(*stash);
 	*stash = cleaned; 	 
 }
